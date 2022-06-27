@@ -1,9 +1,13 @@
-// 출처 : https://github.com/pradel/create-react-app-esbuild/blob/main/packages/craco-esbuild/src/index.js
-
 const { ProvidePlugin } = require('webpack');
 
 const fs = require('fs');
-const { loaderByName, removeLoaders, addAfterLoader, removePlugins, pluginByName } = require('@craco/craco');
+const {
+	loaderByName,
+	removeLoaders,
+	addAfterLoader,
+	// removePlugins,
+	// pluginByName,
+} = require('@craco/craco');
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 // const SpeedMeasureWebpackPlugin = require('speed-measure-webpack-plugin');
 
@@ -43,6 +47,7 @@ module.exports = {
 				options: {
 						loader: useTypeScript ? 'tsx' : 'jsx',
 						target: 'es2015',
+						tsconfigRaw: require('./tsconfig.json'),
 				},
 			});
 
@@ -66,6 +71,7 @@ module.exports = {
 			}
 
 			// `SpeedMeasureWebpackPlugin` 오류 해결을 위해 `MiniCssExtractPlugin` 을 후순위로 지정
+			// 주의: `SpeedMeasureWebpackPlugin` 모듈 사용시 `HtmlWebpackPlugin`의 %PUBLIC_URL% 이 동작하지 않는 버그가 있습니다. 빌드 성능을 체크할때만 사용해주세요
 			// const plugins = [];
 			// webpackConfig.plugins.forEach((plugin) => {
 			// 	if (plugin.constructor.name === "MiniCssExtractPlugin") {
@@ -81,7 +87,7 @@ module.exports = {
 	},
 	jest: {
 		configure: (jestConfig) => {
-			const defaultEsbuildJestOptions = {
+			const esbuildJestOptions = {
 				loaders: {
 					'.js': 'jsx',
 					'.test.js': 'jsx',
@@ -89,10 +95,6 @@ module.exports = {
 					'.test.ts': 'tsx',
 				},
 			};
-
-			const esbuildJestOptions =
-				// (pluginOptions && pluginOptions.esbuildJestOptions) ||
-				defaultEsbuildJestOptions;
 
 			// Replace babel transform with esbuild
 			// babelTransform is first transformer key

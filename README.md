@@ -1,37 +1,36 @@
-# Getting Started with Create React App
+# 시작하기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+위 프로젝트는 esbuild-loader 를 적용한 CRA 템플릿 입니다.
 
-## Available Scripts
+## 사용가능한 명령어
 
-In the project directory, you can run:
+위 프로젝트는 아래에 정의된 명령어를 사용하실 수 있습니다.
 
-### `npm start`
+### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+개발자 모드로 웹을 실행시킵니다.\
+[http://localhost:3000](http://localhost:3000) 주소를 브라우저에 입력하여 화면을 볼 수 있습니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+코드가 변경될때 마다 페이지가 새로고침 됩니다.\
+코드규칙 에러를 콘솔로 보여줍니다.
 
-### `npm test`
+### `yarn build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`build` 디렉토리에 프로젝트를 배포용으로 빌드합니다. \
+배포 모드에서 소스코드를 올바르게 번들하고 최상의 성능을 위해 빌드를 최적화합니다.
 
-### `npm run build`
+빌드된 내용은 `craco.config.js` 설정에 따라 파일이름에 해시정보가 추가될 수 있습니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+자세한 내용은 Create React App의 [배포](https://facebook.github.io/create-react-app/docs/deployment) 섹션을 확인하세요.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `yarn test`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+테스터를 watch 모드로 활성화 합니다.\
+자세한 내용은 Create React App의 [테스트](https://facebook.github.io/create-react-app/docs/running-tests) 섹션을 확인하세요.
 
-### `npm run eject`
+### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**경고: 이 명령어는 한번만 실행이 가능합니다. 실행 후 되돌아 갈 수 없으니 주의해주세요!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
@@ -39,32 +38,11 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+위 프로젝트는 `@craco/craco` 를 사용하여 오버라이딩이 가능하므로 `yarn eject` 를 사용하실 필요가 없습니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[craco](https://github.com/gsoft-inc/craco) 링크에서 자세한 설정 방법을 확인해주세요.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 더 알아보기
 
-### Code Splitting
+추가로 확인하고 싶은 내용이 있다면 [Create React App](https://facebook.github.io/create-react-app/docs/getting-started) 링크를 클릭하세요.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

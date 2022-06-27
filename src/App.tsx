@@ -1,7 +1,8 @@
+import { FunctionComponent } from "react";
 import logo from './logo.svg';
 import './App.scss';
 
-function App() {
+const App: FunctionComponent = () => {
 	return (
 		<div className="App">
 			<header className="App-header">
