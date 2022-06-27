@@ -46,3 +46,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 추가로 확인하고 싶은 내용이 있다면 [Create React App](https://facebook.github.io/create-react-app/docs/getting-started) 링크를 클릭하세요.
 
+## 참조
+
+[pradel/create-react-app-esbuild](https://github.com/pradel/create-react-app-esbuild)
